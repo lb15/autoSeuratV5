@@ -36,7 +36,7 @@ qc_plots_stats <- function(seur, basename, version){
         mean_nFeature = mean(seur$nFeature_RNA)
         median_nFeature= mean(seur$nFeature_RNA)
         sd_nFeature=sd(seur$nFeature_RNA)
-       	num_cells= length(colnames(seur[["RNA"]]@data)) 
+       	num_cells= length(colnames(seur[["RNA"]]$counts)) 
         all_stats = list(mean_percent.mt, median_percent.mt, sd_percent.mt, mean_nCount, median_nCount, sd_nCount, mean_nFeature, median_nFeature, sd_nFeature,num_cells)
         
         statsdf = as.data.frame(do.call(rbind, all_stats))

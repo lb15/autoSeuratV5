@@ -1,21 +1,20 @@
-## Seurat V3 analysis
+## Seurat V5 analysis
 ## initialize object
 
 library(Seurat)
 library(dplyr)
-
-
-### load in functions
-source("/wynton/group/reiter/lauren/autoSeurat/seurat_functions.R")
-source("/wynton/group/reiter/lauren/autoSeurat/seurat_analyses.R")
 
 args=commandArgs(trailingOnly = T)
 
 basename=args[1]
 version=args[2]
 parameters_file = args[3]
-do_marks = args[4]
-soupx=args[5]
+project_root=args[4]
+do_marks = args[5]
+soupx=args[6]
+
+source(paste0(project_root,"/seurat_functions.R"))
+source(paste0(project_root,"/seurat_analyses.R"))
 
 ## set default to FALSE if no input
 print("do_marks:")
