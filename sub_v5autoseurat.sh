@@ -13,7 +13,7 @@
 ##### LOAD SOFTWARE #####
 
 module load CBI
-module load r/4.3
+module load r/4.4.3-gcc13
 
 if [[ -z "$TMPDIR" ]]; then
   if [[ -d /scratch ]]; then TMPDIR=/scratch/$USER; else TMPDIR=/tmp/$USER; fi
